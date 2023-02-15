@@ -1,0 +1,18 @@
+spring:
+  quartz:
+    properties:
+      org.quartz.threadPool.threadCount: 5
+    job-store-type: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/myjob
+    username: root
+    password: Huyhn25062000@
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: withuwe021@gmail.com
+    password: dimflojlousrplwk
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
