@@ -1,8 +1,13 @@
 spring:
   quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never # init at begin then set to never
+      schema: classpath:quartz_init.sql
     properties:
       org.quartz.threadPool.threadCount: 5
-    job-store-type: jdbc
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+
   datasource:
     url: jdbc:mysql://localhost:3306/myjob
     username: root
